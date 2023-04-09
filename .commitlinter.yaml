@@ -21,7 +21,7 @@ type_rules:
     description: for updating build configuration, development tools or other changes irrelevant to the user.
   - type: chore
     description: for updates that do not apply to the above, such as dependency updates.
-reference: https://github.com/masahiro331/go-commitlinter#description
+reference: https://github.com/donglf681/go-commitlinter#description
 style_pattern: '[a-z]+'
 style_doc: The type and scope should always be lowercase.
 scope_pattern: '(feat|fix|perf|docs|style|refactor|test|build|chore)'
