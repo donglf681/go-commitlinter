@@ -4,27 +4,27 @@ skip_prefixes:
   - 'BREAKING: '
 type_rules:
   - type: feat
-    description: for a new feature for the user, not a new feature for build script.
+    description: 表示在代码库中新增了一个功能，这和语义化版本中的 [`MINOR`](https://semver.org/#summary) 相对应.
   - type: fix
-    description: for a bug fix for the user, not a fix to a build script.
+    description: 在代码库中修复了一个 `bug`，这和语义化版本中的 [`PATCH`](https://semver.org/#summary) 相对应.
   - type: perf
-    description: for performance improvements.
+    description: 对当前实现进行改进，提升性能的代码修改.
   - type: docs
-    description: for changes to the documentation.
+    description: 仅文档的修改(`documentation`）.
   - type: style
-    description: for formatting changes, missing semicolons, etc.
+    description: 不影响代码含义的代码修改（空格，格式化，缺少分号，等等）.
   - type: refactor
-    description: for refactoring production code, e.g. renaming a variable.
+    description: 既不是修复 `bug` 也不是新增功能的代码修改.
   - type: test
-    description: for adding missing tests, refactoring tests; no production code change.
+    description: 添加缺少的「单元测试」，或更正已存在的「单元测试」.
   - type: build
-    description: for updating build configuration, development tools or other changes irrelevant to the user.
+    description: 用于更新构建配置、开发工具或其他与用户无关的更改.
   - type: chore
-    description: for updates that do not apply to the above, such as dependency updates.
+    description: 对构建过程或辅助工具和依赖库的更改（如自动文档生成工具、CI 构建工具，配置和脚本）.
 reference: https://github.com/donglf681/go-commitlinter#description
 style_pattern: '[a-z]+'
-style_doc: The type and scope should always be lowercase.
+style_doc: 类型和范围应始终为小写.
 scope_pattern: '(feat|fix|perf|docs|style|refactor|test|build|chore)'
-scope_doc: The <scope> can be empty (e.g. if the change is a global or difficult to assign to a single component), in which case the parentheses are omitted.
-subject_pattern: '[a-z]\w*'
-subject_doc: The first letter of <subject> should be lowercase.
+scope_doc: <scope> 可以为空（例如，如果更改是全局的或难以分配给单个组件），在这种情况下省略括号.
+subject_pattern: '^[a-z]\w*'
+subject_doc: <subject> 首字母小写.
