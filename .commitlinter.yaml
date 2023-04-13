@@ -26,5 +26,5 @@ style_pattern: '[a-z]+'
 style_doc: 类型和范围应始终为小写.
 scope_pattern: '(feat|fix|perf|docs|style|refactor|test|build|chore)'
 scope_doc: <scope> 可以为空（例如，如果更改是全局的或难以分配给单个组件），在这种情况下省略括号.
-subject_pattern: '^[a-z]\w*'
+subject_pattern: "^[a-z\\p{Han}]\\w*"
 subject_doc: <subject> 首字母小写.
